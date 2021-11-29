@@ -27,9 +27,9 @@ public:
 	// tábla mérete is kell!
 
 	int meret;
-	int (*hasitofuggveny)(string); // a hasitofuggveny deklarációja
+	int (*hasitofuggveny)(string); // a hasitofuggveny deklarációja C#-ban Func<string, int> hasitofuggveny
 
-	Szotar(int m, int (*fuggvenyneve)(string))
+	Szotar(int m, int (*fuggvenyneve)(string)) // két bemenet, a méret és a hasítófüggvény, amit a user megad
 	{
 		this-> meret = m;
 		this-> hasitofuggveny = fuggvenyneve; 
@@ -123,6 +123,9 @@ int main()
 
 	// lambda-kifejezés c++-ban: ("-> int" elhagyható)
 	Szotar szotar(10, [](string telefonszam) -> int {return telefonszam[telefonszam.size() - 1] - 48; });
+	// c#-ban így nézett volna ki:
+	// Szotar szotar = new Szotar(10, s => telefonszam[s.size() - 1] - 48);
+
 	// Elem elem("bla", 5); // lámlám, itt ilyet nem lehet
 
 	szotar.diagnosztika();
