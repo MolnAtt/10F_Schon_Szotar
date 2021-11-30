@@ -138,14 +138,13 @@ int main()
 	szotar.Add("3619876539", 85);
 	szotar.diagnosztika();
 
-	szotar.Add("3619876532", 87);
+	szotar.Add("3619876542", 87);
 	szotar.diagnosztika();
 
 	szotar.Add("3619876539", 187);
 	szotar.diagnosztika();
 
 	cerr << "A torlodassal volt problema!";
-
 
 }
 
